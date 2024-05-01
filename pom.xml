@@ -153,13 +153,21 @@
             </configuration>
           </execution>
           <execution>
+            <id>npm config set registry</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set registry ${env.NPM_REGISTRY_URL}</arguments>
+            </configuration>
+          </execution>
+          <execution>
             <id>npm install lock-treatment-tool</id>
             <goals>
               <goal>npm</goal>
             </goals>
             <configuration>
               <skip>${skip.ui.deps}</skip>
-              <npmRegistryURL>${env.NPM_REGISTRY_URL}</npmRegistryURL>
               <arguments>install @kie/lock-treatment-tool@0.2.4 -w</arguments>
             </configuration>
           </execution>
@@ -170,7 +178,6 @@
             </goals>
             <configuration>
               <skip>${skip.ui.deps}</skip>
-              <npmRegistryURL>${env.NPM_REGISTRY_URL}</npmRegistryURL>
               <arguments>run env -- locktt --skipIntegrity</arguments>
             </configuration>
           </execution>
@@ -181,7 +188,6 @@
             </goals>
             <configuration>
               <skip>${skip.ui.deps}</skip>
-              <npmRegistryURL>${env.PNPM_REGISTRY_URL}</npmRegistryURL>
               <arguments>bootstrap</arguments>
             </configuration>
           </execution>
