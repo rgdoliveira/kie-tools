@@ -58,7 +58,7 @@
     <version.npm>6.10.3</version.npm>
     <version.pnpm>v8.7.0</version.pnpm>
 
-    <quarkus.platform.version>3.2.10.Final</quarkus.platform.version>
+    <quarkus.platform.version>3.8.4</quarkus.platform.version>
     <version.org.kie.kogito>999-SNAPSHOT</version.org.kie.kogito>
   </properties>
 
